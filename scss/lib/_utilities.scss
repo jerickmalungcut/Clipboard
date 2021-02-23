@@ -1,0 +1,126 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+html, body {
+    font-family: $main-font;
+    font-size: 10px;
+    color: $color-dark-grey-blue; 
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: $desktop;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: $font-bold;
+    padding: 1.5rem 2rem;
+    border: 1px solid $color-primary;
+    border-radius: 2.8rem;
+    color: $color-white;
+    margin: 0.5rem;
+    transition: all .2s;
+    box-shadow: inset 2px 2px 2px rgba($color-white, 0.9);
+
+    @include tablet {
+        font-size: 1.2rem;
+        padding: 1.2rem 1.8rem;
+    }
+
+    @include mobile {
+        display: block;
+    }
+}
+
+.cta {
+
+    .cta-ios {
+        background-color: $color-primary;
+
+        &:hover {
+            background-color: $color-secondary;
+        }
+    }
+
+    .cta-mac {
+        color: $color-dark-grey-blue;
+
+        &:hover {
+            background-color: $color-secondary;
+            border: 1px solid $color-secondary;
+            color: $color-white;
+        }
+    }
+}
+
+.heading {
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 1.5rem;
+
+    @include mobile {
+        font-size: 2rem;
+    }
+}
+
+.heading-sub {
+    font-size: 1.3rem;
+    width: 51.5rem;
+    text-align: center;
+    margin: auto;
+    color: $color-grey-blue;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+
+    @include mobile {
+        width: 80%;
+    }
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+.arrow {
+    background-color: $color-primary;
+    border-radius: 100%;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    height: 5rem;
+    width: 5rem;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .2s;
+    display: none;
+    visibility: hidden;
+
+    &:hover {
+        background-color: $color-secondary;
+    }
+}
+
+.arrow.active {
+    display: flex;
+    visibility: visible;
+}
