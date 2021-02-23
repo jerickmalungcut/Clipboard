@@ -12,6 +12,7 @@
     .row {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        -ms-grid-columns: repeat(2, 1fr);
         align-items: center;
         padding: 4rem;
 
